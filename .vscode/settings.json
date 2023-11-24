@@ -1,0 +1,14 @@
+{
+  "python.autoComplete.extraPaths": [
+    "C:\\Users\\Phil butterworth\\AppData\\Roaming\\Autodesk\\Autodesk Fusion 360\\API\\Python\\defs"
+  ],
+  "python.analysis.extraPaths": [
+    "C:/Users/Phil butterworth/AppData/Roaming/Autodesk/Autodesk Fusion 360/API/Python/defs"
+  ],
+  "python.defaultInterpreterPath": "C:/Users/Phil butterworth/AppData/Local/Autodesk/webdeploy/production/3167d85f5fd4280287d8295f20592fa13b977617/Python/python.exe",
+  "fusion-360-helper.enabled": true,
+  "fusion-360-helper.python.pythonPath": "C:\\Users\\Phil butterworth\\AppData\\Local\\Autodesk\\webdeploy\\production\\e3fd45ba03e541f75bf8195292579861b6ebb663\\Python\\python.exe",
+  "fusion-360-helper.python.extraLibs": [
+    "C:\\Users\\Phil butterworth\\AppData\\Roaming\\Autodesk\\Autodesk Fusion 360\\API\\Python\\defs"
+  ]
+}

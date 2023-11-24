@@ -1,0 +1,13 @@
+{
+	"autodeskProduct":	"Fusion360",
+	"type":	"addin",
+	"id":	"9adc2fbc-3293-4223-a133-999181ae6287",
+	"author":	"Lee Sanders, Philipp Neumann, Franck Messmer, Phil Butterworth",
+	"description":	{
+		"":	"Rename all operations in a setup, to a specified format. While keeping any user defined names intact.",
+	},
+	"version":	"0.0.3",
+	"runOnStartup":	false,
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
