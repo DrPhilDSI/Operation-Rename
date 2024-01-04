@@ -160,6 +160,8 @@ def command_execute(args: adsk.core.CommandEventArgs):
         op = adsk.cam.Operation.cast(op)
         prefix = input_prefix.text
         tempInitName = op.name
+
+ 
         parts = tempInitName.split()
         
         # Convert strategy name
@@ -178,6 +180,9 @@ def command_execute(args: adsk.core.CommandEventArgs):
                 modified_parts.append(op.name) # Add the original name
             else:
                 modified_parts.append(part) # Add the part
+
+ 
+
 
         merged_str = ' '.join(modified_parts) # Merge the parts
         strategy_name = f"{strategy} " if input_stratname.value else "" # Add the strategy name if the user wants it
@@ -254,6 +259,8 @@ def convert_strategy(strategy):
 
 # Remove numbers from the end of the string and capitalize the first letter
 def format_comment(text):   
-    char = r'\d+(\s+(\(\d+\))?)?\s*$' 
-    filtered_string = re.sub(char, '', text).strip() 
+    char = r'\b[a-zA-Z]+\d+\b|\(\d+\)'
+    filtered_string = re.sub(char, '', text)
+    # Remove any extra spaces left by the removal
+    filtered_string = re.sub(r'\s+', ' ', filtered_string).strip()
     return filtered_string.capitalize()
