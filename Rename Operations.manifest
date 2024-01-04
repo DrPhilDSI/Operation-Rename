@@ -7,7 +7,7 @@
 		"":	"Rename all operations in a setup, to a specified format. While keeping any user defined names intact.",
 	},
 	"version":	"1.0",
-	"runOnStartup":	true,
+	"runOnStartup":	false,
 	"supportedOS":	"windows|mac",
 	"editEnabled":	true
 }

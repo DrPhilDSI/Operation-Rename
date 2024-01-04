@@ -9,7 +9,7 @@ ui = app.userInterface
 
 
 # TODO *** Specify the command identity information. ***
-CMD_ID = f'{config.COMPANY_NAME}_{config.ADDIN_NAME}_cmdDialog'
+CMD_ID = f'{config.COMPANY_NAME}_{config.ADDIN_NAME}_RenameOperations'
 CMD_NAME = 'Rename Operations'
 CMD_Description = '''Rename all operations in the activated setup (including operations in any folder within that setup) to a specified format.\n
 Example output (with "Add Operation Strategy" checked):\nOP 1 - drill\nOP 2 - chamfer2d\n\nOr (with "Add Operation Strategy" unchecked):\nOP 1 \nOP 2'''
@@ -144,7 +144,7 @@ def command_execute(args: adsk.core.CommandEventArgs):
     if setup.allOperations.count < 1:
         #app.log('WARNING: No operation renamed!')  
         ui.messageBox('Ensure there are operations in the active setup and try again...', 'Fusion 360',
-                       adsk.core.MessageBoxButtonTypes.OKButtonType, adsk.core.MessageBoxIconTypes.WarningIconType)
+                    adsk.core.MessageBoxButtonTypes.OKButtonType, adsk.core.MessageBoxIconTypes.WarningIconType)
         return
 
     # process setup 
@@ -161,7 +161,6 @@ def command_execute(args: adsk.core.CommandEventArgs):
         prefix = input_prefix.text
         tempInitName = op.name
 
- 
         parts = tempInitName.split()
         
         # Convert strategy name
@@ -181,7 +180,6 @@ def command_execute(args: adsk.core.CommandEventArgs):
             else:
                 modified_parts.append(part) # Add the part
 
- 
 
 
         merged_str = ' '.join(modified_parts) # Merge the parts
